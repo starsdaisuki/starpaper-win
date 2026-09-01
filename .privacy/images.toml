@@ -1,0 +1,21 @@
+version = 1
+
+# One entry is required for each image path + exact content hash. Changing an
+# image invalidates the approval. OCR is not implemented in the MVP, so
+# visual_reviewed must represent a real human inspection of the original image.
+# metadata_reviewed covers PNG tEXt/zTXt/iTXt/eXIf chunks.
+#
+# [[images]]
+# path = "docs/example.png"
+# sha256 = "64 lowercase hex characters"
+# visual_reviewed = true
+# metadata_reviewed = true
+
+[[images]]
+# StarPaper 的应用图标：蓝紫渐变圆角方块 + 三颗四角星。
+# 从 res/StarPaper.ico 里抠出的 256×256 那一帧，和商店 logo、exe 内嵌图标同源。
+# 无文字、无截图内容、无个人信息。给 README 顶部展示用。
+path = "res/icon.png"
+sha256 = "f6d31eb3f9fc478e976ebb4076dc8529babc3c0f467472a78bfe6f2a2fa948bf"
+visual_reviewed = true
+metadata_reviewed = true

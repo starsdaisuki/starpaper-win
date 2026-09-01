@@ -1,0 +1,6 @@
+# ⚠️ Windows PowerShell 5.1 对 UTF-8 无 BOM 的 .ps1 按 ANSI/GBK 读，
+# 中文注释会乱码并吃掉后续字符，报的是莫名其妙的语法错。
+# .ps1 一律 UTF-8 with BOM + CRLF，别让 git 改动行尾。
+*.ps1 text eol=crlf working-tree-encoding=UTF-8
+*.bat text eol=crlf
+*.sh  text eol=lf

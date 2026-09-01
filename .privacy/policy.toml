@@ -1,0 +1,22 @@
+version = 1
+
+# 这些值会公开提交。只放确认过、有意公开的标识符。
+
+# 公开协作者的 commit trailer 邮箱；都不是项目所有者的私人邮箱。
+approved_emails = ["noreply@anthropic.com", "noreply@openai.com"]
+
+# 全是版本号和 X.509 OID，被 IP 规则误判：
+#   1.0.0.0 / 1.0.1.0 / 1.0.2.0 / 1.0.3.0 / 6.0.0.0  应用清单里的 assembly 版本
+#   1.3.6.1.5.5.7.3.3        代码签名 EKU 的 OID
+#   2.5.29.37 / 2.5.29.19    Extended Key Usage / Basic Constraints 的 OID
+approved_ips = ["1.0.0.0", "1.0.1.0", "1.0.2.0", "1.0.3.0", "6.0.0.0", "1.3.6.1.5.5.7.3.3", "2.5.29.37", "2.5.29.19"]
+
+# 全是微软公开定义的常量，不是本机/账号标识：
+#   8e0f7a12-… / 1f676c76-…  应用清单里的 supportedOS（Win10/11、Win8.1）
+#   F75C23C8-… / EE5B60BD-…  WinRT IStartupTask / IStartupTaskStatics 的 IID
+approved_uuids = [
+  "8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a",
+  "1f676c76-80e1-4239-95bb-83d0f6d0da78",
+  "F75C23C8-B5F2-4F6C-88DD-36CB1D599D17",
+  "EE5B60BD-A148-41A7-B26E-E8B88A1E62F8",
+]

@@ -1,0 +1,17 @@
+StarPaper.exe
+*.obj
+*.pdb
+*.ilk
+build/
+probe.exe
+*.mp4
+shot*.jpg
+testcard.png
+build-res.o
+*.res
+StarPaper-arm64.exe
+build-res-arm64.o
+
+# Partner Center 身份，本地专用，绝不入库
+packaging/msix/identity.env
+.DS_Store
